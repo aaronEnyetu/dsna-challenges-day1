@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation } = require('./index');
+const { reverseSentence, addPunctuation, oddishEvenish, at } = require('./index');
 const { addCapitalToWords } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -25,4 +25,16 @@ describe('Add capital to first letter of a word', () => {
   it('should add a capital letter to each word', () => {
     expect(addCapitalToWords('alchemy ROCKS goLD')).toBe('Alchemy Rocks Gold');
   });
+});
+
+it('should return oddish or evenish', () => {
+  expect(oddishEvenish('121')).toEqual('evenish');
+  expect(oddishEvenish('311')).toEqual('oddish');
+  expect(oddishEvenish('41')).toEqual('oddish');
+});
+
+it('should find array.at()', () => {
+  const arr = ['a', 'b', 'c', 'd', 'e'];
+  expect(at(arr, 2)).toEqual('c');
+  expect(at(arr, -1)).toEqual('e');
 });
