@@ -4,4 +4,33 @@ function reverseSentence(str) {
     .map((word) => word.split('').reverse().join(''))
     .join(' ');
 }
-module.exports = { reverseSentence };
+
+function addCapitalToWords(str) {
+  return str
+    .toLowerCase()
+    .split(' ')
+    .map((word) => word[0].toUpperCase() + word.substring(1))
+    .join(' ');
+
+
+}
+  
+  
+module.exports = { reverseSentence, addCapitalToWords };
+  
+//   return str.charAt(0).toUpperCase() + str.slice(1);
+// }
+
+// function capitalizeWords(str) {
+//   return str.replace(/(^\w{1})|(\s{1}\w{1})/g, (a) => {
+//     return a.toUpperCase();
+//   });
+// }
+// str = str.split('');
+
+// for (let i = 0; i < str.length ; i++) {
+//   str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+// }
+
+// return str.join('');
+// }
