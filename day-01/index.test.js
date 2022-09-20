@@ -1,5 +1,5 @@
 const { reverseSentence, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples, rootDigit } = require('./index');
-const { addCapitalToWords, largestEven } = require('./index');
+const { addCapitalToWords, largestEven, fib, every } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -71,3 +71,12 @@ it('rootDigit should return a single digit sum of numbers', () => {
 test('largest-even', () => {
   expect(largestEven([2, 3, 4, 12])).toEqual(12);
 });
+
+test('fibonacci', () => {
+  expect(fib(4)).toEqual(3);
+});
+
+test('every', () => {
+  expect(every([2, 4, 6], n => n % 2 === 0)).toEqual(true);
+});
+
