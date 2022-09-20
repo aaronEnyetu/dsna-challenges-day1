@@ -1,5 +1,5 @@
 const { reverseSentence, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples, rootDigit } = require('./index');
-const { addCapitalToWords, largestEven, fib, every } = require('./index');
+const { addCapitalToWords, largestEven, fib, every, filter } = require('./index');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -80,3 +80,6 @@ test('every', () => {
   expect(every([2, 4, 6], n => n % 2 === 0)).toEqual(true);
 });
 
+test('filter', () => {
+  expect(filter([1, 2, 3, 4], n => n % 2 === 0)).toEqual([2, 4]);
+});

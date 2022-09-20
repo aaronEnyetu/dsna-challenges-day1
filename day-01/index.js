@@ -127,8 +127,21 @@ function every(arr, predicate) {
   return true;
 }
 
+//-------------------------STRETCH (Filter)------------------------------------
 
-module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples, rootDigit, largestEven, fib, every };
+function filter(arr, predicate) {
+  const newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (predicate(arr[i])) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+}
+
+
+module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples, rootDigit, largestEven, fib, every, filter };
  
 
 
