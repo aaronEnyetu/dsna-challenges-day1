@@ -38,7 +38,23 @@ function at(arr, i) {
 }
 
 
-module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at };
+//---------------------------PRIM04 (Anagrams)-------------------------------------
+
+function anagrams(str1, str2) {
+  const ana = str1.split('');
+  const grams = str2.split('');
+
+  return ana.map(letter => grams.includes(letter)).includes(false) ? false : true;
+}
+
+
+
+
+
+
+
+
+module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams };
  
 
 
