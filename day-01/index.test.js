@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples } = require('./index');
+const { reverseSentence, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples, rootDigit } = require('./index');
 const { addCapitalToWords } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -59,4 +59,11 @@ it('fizzBuzz should return multiples of 3 with "Fizz" and multiples of 5 with "B
 it('should return all of the numbers from 1 to 50 that are multiples of `n`', () => {
   expect(multiples(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
   expect(multiples(25)).toEqual([25, 50]);
+});
+
+
+it('rootDigit should return a single digit sum of numbers', () => {
+  expect(rootDigit(123)).toEqual(6);
+  expect(rootDigit(4322)).toEqual(2);
+  expect(rootDigit(999888777)).toEqual(9);
 });

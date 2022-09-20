@@ -77,7 +77,17 @@ function multiples(number) {
 }
 
 
-module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples };
+//--------------------------------------REC01 (Digits-Sum-Root)-----------------------
+
+function rootDigit(n) {
+  const digits = n.toString().split('');
+  const numbers = digits.map(d => +d);
+  const sum = numbers.reduce((a, b) => a + b);
+
+  return String(sum).split('').length === 1 ? sum : rootDigit(sum);
+}
+
+module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples, rootDigit };
  
 
 
