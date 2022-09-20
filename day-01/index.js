@@ -48,13 +48,27 @@ function anagrams(str1, str2) {
 }
 
 
+//--------------------------PRIM05 (Fizz-Buzz)------------------------------------
+
+function fizzBuzz(number) {
+  const arr = [];
+  for (let i = 1; i <= number; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      arr.push ('fizzBuzz');
+    } else if (i % 3 === 0) {
+      arr.push('fizz');
+    } else if (i % 5 === 0) {
+      arr.push('buzz');
+    } else arr.push(i);
+  }
+  return arr;
+}
 
 
 
 
 
-
-module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams };
+module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz };
  
 
 

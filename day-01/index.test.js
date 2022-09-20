@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, oddishEvenish, at, anagrams } = require('./index');
+const { reverseSentence, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz } = require('./index');
 const { addCapitalToWords } = require('./index');
 
 describe('primitive code challenges', () => {
@@ -47,4 +47,10 @@ it('anagrams should return true/false for anagrams', () => {
   const wordFour = 'documentarily';
   expect(anagrams(wordOne, wordTwo)).toEqual(true);
   expect(anagrams(wordThree, wordFour)).toEqual(false);
+});
+
+
+it('fizzBuzz should return multiples of 3 with "Fizz" and multiples of 5 with "Buzz" ', () => {
+  const arr =  [1, 2, 'fizz', 4, 'buzz', 'fizz', 7, 8, 'fizz', 'buzz', 11, 'fizz', 13, 14, 'fizzBuzz'];
+  expect(fizzBuzz(15)).toEqual(arr);
 });
