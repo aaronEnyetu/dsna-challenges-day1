@@ -65,10 +65,19 @@ function fizzBuzz(number) {
 }
 
 
+//---------------------------------PRIM06 (Multiples of n)----------------------------
+
+function multiples(number) {
+  const arr = [];
+  if (number >= 50) return arr;
+  for (let i = 1; i <= 50; i++) {
+    if (i % number === 0) arr.push(i);
+  }
+  return arr;
+}
 
 
-
-module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz };
+module.exports = { reverseSentence, addCapitalToWords, addPunctuation, oddishEvenish, at, anagrams, fizzBuzz, multiples };
  
 
 
