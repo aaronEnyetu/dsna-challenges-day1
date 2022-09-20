@@ -5,6 +5,12 @@ function reverseSentence(str) {
     .join(' ');
 }
 
+function addPunctuation(string) {
+  return function punctuate(quote) {
+    return (`${quote}${string}`);
+  };
+}
+
 function addCapitalToWords(str) {
   return str
     .toLowerCase()
@@ -16,8 +22,15 @@ function addCapitalToWords(str) {
 }
   
   
-module.exports = { reverseSentence, addCapitalToWords };
-  
+module.exports = { reverseSentence, addCapitalToWords, addPunctuation };
+ 
+
+
+
+
+
+//----------------------------CODE FOR REVISION-------------------------
+// ADD CAPITAL TO WORDS
 //   return str.charAt(0).toUpperCase() + str.slice(1);
 // }
 
