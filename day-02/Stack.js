@@ -14,6 +14,10 @@ class Stack {
     this.#list.pop();
   }
     
+  classPeek() {
+    return this.#list[this.#list.length - 1];
+  }
+    
   get readableArr() {
     return this.#list;
   }
