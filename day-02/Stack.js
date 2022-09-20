@@ -10,6 +10,10 @@ class Stack {
     this.#list.push(item);
   }
     
+  classPop() {
+    this.#list.pop();
+  }
+    
   get readableArr() {
     return this.#list;
   }

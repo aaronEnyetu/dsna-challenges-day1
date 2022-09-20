@@ -8,5 +8,11 @@ describe('Stack Tests', () => {
     newItemArr.classPush('lizard');
     expect(newItemArr.readableArr).toEqual(['fox', 'goose', 'lizard']);
   });
+    
+  it('pop should return the array without the last item', () => {
+    const newItemArr = new Stack(['fox', 'goose', 'lizard']);
+    newItemArr.classPop();
+    expect(newItemArr.readableArr).toEqual(['fox', 'goose']);
+  });
 
 });
