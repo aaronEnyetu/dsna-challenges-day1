@@ -15,4 +15,11 @@ describe('Queue stuff', () => {
     expect(newItemArr.readableArr).toEqual(['goose', 'lizard']);
   });
     
+  it('Checks to see if there is something in the array', () => {
+    const doesExist = new Queue(['goose', 'lizard']);
+    const doesNotExist = new Queue([]);
+    expect(doesExist.hasNext()).toEqual(true);
+    expect(doesNotExist.hasNext()).toEqual(false);
+  });
+    
 });

@@ -14,7 +14,11 @@ class Queue {
     this.#list.shift();
   }
     
-
+    
+  hasNext() {
+    return this.#list.length ? true : false;
+  }
+    
   get readableArr() {
     return this.#list;
   }
