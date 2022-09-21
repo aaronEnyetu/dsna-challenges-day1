@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const { Stack } = require('../Stack');
 
 describe('Stack Tests', () => {
