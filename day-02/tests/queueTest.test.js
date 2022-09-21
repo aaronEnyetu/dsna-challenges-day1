@@ -9,4 +9,10 @@ describe('Queue stuff', () => {
     expect(newItemArr.readableArr).toEqual(['fox', 'goose', 'lizard']);
   });
     
+  it('Dequeue should remove an item from the front', () => {
+    const newItemArr = new Queue(['fox', 'goose', 'lizard']);
+    newItemArr.dequeue();
+    expect(newItemArr.readableArr).toEqual(['goose', 'lizard']);
+  });
+    
 });

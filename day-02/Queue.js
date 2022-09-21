@@ -8,6 +8,13 @@ class Queue {
   enqueue(item) {
     this.#list.push(item);
   }
+    
+
+  dequeue() {
+    this.#list.shift();
+  }
+    
+
   get readableArr() {
     return this.#list;
   }
