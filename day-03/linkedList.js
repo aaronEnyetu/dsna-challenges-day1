@@ -14,6 +14,13 @@ class LinkedListNode {
       this.next.add(node);
     }
   }
+    
+  //TIME COMPLEXITY - O(1) or O(n) - if inserting element to the beginning or end of the list, runtime will be O(1). If inserting element anywhere in the list, runtime will be O(n)
+
+  getList() {
+    if (!this.next) return this.value;
+    return `${this.value} ${this.next.getList()}`;
+  }
   
 }
 
