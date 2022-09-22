@@ -19,3 +19,40 @@ Input | Output | Because
 ---|---|---
 `121` | `'Evenish'` | `1 + 2 + 1 = 4`
 `41` | `'Oddish'` | `4 + 1 = 5`
+
+## EXAMPLE 1
+
+const num = 434667;
+const isOddish = (num, sum = 0) => {
+   if(num){
+      return isOddish(Math.floor(num / 10), sum + (num % 10));
+   };
+   return sum % 2 === 1;
+};
+console.log(isOddish(num));
+
+## EXAMPLE 2
+
+public class Program
+{
+    public static string OddishOrEvenish(int num)
+    {
+       string str = num.ToString();
+       int conDig = 0;
+       int result = 0;
+
+       for (int i = 0; i < str.Length; i++)
+       {
+          conDig = str[i];
+          result += conDig;
+       }
+       if (result % 2 == 0)
+       {
+          return "Evenish";
+       }
+       else
+       {
+          return "Oddish";
+       }
+    }
+}
