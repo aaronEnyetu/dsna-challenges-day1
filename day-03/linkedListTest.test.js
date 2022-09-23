@@ -25,3 +25,16 @@ test('getting list in linked list', () => {
   root.add(nodeD);
   expect(root.getList()).toBe('A B C D');
 });
+
+
+test('removing from linked list', () => {
+  const root = new LinkedListNode('A');
+  const nodeB = new LinkedListNode('B');
+  const nodeC = new LinkedListNode('C');
+  const nodeD = new LinkedListNode('D');
+  root.add(nodeB);
+  root.add(nodeC);
+  root.add(nodeD);
+  root.remove('C');
+  expect(root.getList()).toBe('A B D');
+});
